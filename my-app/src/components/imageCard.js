@@ -23,7 +23,7 @@ const ImageCard = ({ image,author }) => {
         <div className='image'>
         <div className='image_card'>
             {blobUrl ? null : 'Loading...'}
-            <img src={blobUrl} />
+            <img src={blobUrl} alt={author}/>
         </div>
         <div className='image_card_info'>
             <h2>{author}</h2>
