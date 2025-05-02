@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect } from 'react';
 import ImagesList from './components/imagesList';
@@ -10,7 +9,6 @@ function App() {
   
   const [imagesData, setImagesData] = useState([]);
   const [page, setPage] = useState(PAGE_NUMBER);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setTimeout(async () => {
@@ -21,7 +19,6 @@ function App() {
       setImagesData((oldState) => {
         return [...oldState, ...response.data];
       });
-      setLoading(false);
     }, 1500);
   }, [page]);
 
@@ -37,7 +34,6 @@ function App() {
         window.innerHeight + document.documentElement.scrollTop + 1 >=
         document.documentElement.scrollHeight
     ) {
-        setLoading(true);
         setPage((prev) => prev + 1);
     }
 };
