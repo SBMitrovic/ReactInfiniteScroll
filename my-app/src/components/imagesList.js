@@ -9,7 +9,7 @@ const ImagesList = ({ imagesData }) => {
                 return (
                     <ImageCard
                         key={index}
-                        image={image.url}
+                        image={image.download_url}
                         author={image.author}
                     />
                 );
