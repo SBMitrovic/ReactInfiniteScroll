@@ -2,12 +2,13 @@
     cursor: pointer;
     background: rgb(231, 231, 231);
     border-radius: 20px;
-    margin: 2rem 5rem;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 20px 25px;
-    width: 250px;
+    flex: 1 1 30%; 
     transition: all 0.3s ease;
+    margin: 10px 0; 
+    box-sizing: border-box;
 }
 
 .image:hover {
@@ -15,7 +16,7 @@
 }
 
 .image_card {
-    width: 200px;
+    width: 100%;
     height: 200px;
 }
 
@@ -24,6 +25,7 @@
     height: 100%;
     object-fit: cover;
 }
+
 
 .image_card_info {
     margin-top: 1rem;
@@ -36,4 +38,17 @@
 
 .image_card_info h3 {
     color: #272727;
+}
+
+
+@media (max-width: 768px) {
+    .image {
+        flex: 1 1 45%; /* 2 items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image {
+        flex: 1 1 90%; /* 1 item per row on mobile screens */
+    }
 }
