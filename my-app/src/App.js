@@ -41,11 +41,13 @@ function App() {
 
   return (
     <div className='app'>
+      <div className='nav'>
       <SearchButton
         originalImages={originalImagesData}
         setFilteredImages={setImagesData}
       />
       <h1>Images Gallery</h1>
+      </div>
       <ImagesList imagesData={imagesData} />
     </div>
   );
