@@ -6,7 +6,7 @@ function SearchButton({ originalImages, setFilteredImages }) {
   const handleClick = () => {
     const filtered = originalImages.filter((img) => {
         const nameParts = img.author.toLowerCase().split(' ');
-        return nameParts.some((part) => part === inputValue.toLowerCase());
+        return nameParts.some((part) => part.includes(inputValue.toLowerCase()));
       });
 
     window.alert(`Found ${filtered.length} result(s) for: ${inputValue}`);
