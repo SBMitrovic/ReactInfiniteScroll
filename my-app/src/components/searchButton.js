@@ -12,7 +12,7 @@ function SearchButton({ originalImages, setFilteredImages }) {
     window.alert(`Found ${filtered.length} result(s) for: ${inputValue}`);
     setFilteredImages(filtered);
   };
-
+  
   return (
     <div>
       <input
